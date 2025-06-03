@@ -1,14 +1,22 @@
+import { type ChangeEvent } from "react";
 import { Todo } from "../models/Todo"
 
 type TodoPresentationProps = {
   todo: Todo;
+  onToggle: (id: number) => void;
 }
 
-export const TodoPresentation = ({ todo }: TodoPresentationProps) => {
+export const TodoPresentation = ({ todo, onToggle }: TodoPresentationProps) => {
+  const handleStatus = (e: ChangeEvent<HTMLInputElement>) => {
+    if(e.target.checked) {
+      onToggle(todo.id);
+    }
+  } 
+
   return (
     <ul>
       <li>
-        {todo.name} | Done: <input type="checkbox" checked={todo.done} />
+        {todo.name} | Done: <input type="checkbox" checked={todo.done} id="done" onChange={handleStatus}/>
       </li>
     </ul>
   )
