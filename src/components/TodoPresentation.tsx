@@ -11,10 +11,8 @@ export const TodoPresentation = ({ todo, onToggle }: TodoPresentationProps) => {
   } 
 
   return (
-    <ul>
-      <li>
-        {todo.name} | Done: <input type="checkbox" checked={todo.done} id="done" onChange={handleStatus}/>
-      </li>
-    </ul>
+    <li>
+      {todo.name} | Done: <input type="checkbox" checked={todo.done} id="done" onChange={handleStatus}/>
+    </li>
   )
 }

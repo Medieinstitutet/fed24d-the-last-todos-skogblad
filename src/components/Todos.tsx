@@ -8,8 +8,8 @@ type TodosProps = {
 
 export const Todos = ({ todos, onToggle }: TodosProps) => {
   return (
-    <section>
+    <ul>
       {todos.map((todo) => ( <TodoPresentation todo={todo} key={todo.id} onToggle={onToggle} /> ))}
-    </section>
+    </ul>
   );
 }
