@@ -19,22 +19,24 @@ export const TodoApp = () => {
   // Function to click the checkbox = todo done = todo removed from UI
   const handleToggleTodo = (id: number) => {
     setTodos(currentTodos => {
-      const updatedTodoList = currentTodos.map(todo => todo.id === id ? {...todo, done: true } : todo);
-    
-      console.log("All todos:", updatedTodoList);
-
-      return updatedTodoList.filter(todo => !todo.done)
-    
+     return currentTodos.map(todo => todo.id === id ? {...todo, done: !todo.done } : todo );
     });
   }
-
-  console.log("Current Todos:", todos)
+  
   localStorage.setItem("todos", JSON.stringify(todos));
+
+  const activeTodos = todos.filter(todo => !todo.done);
+  const doneTodos = todos.filter(todo => todo.done);
+
+  console.log("Active Todos:", activeTodos)
+  console.log("Done Todos:", doneTodos )
 
   return (
     <>
       <h1>My Todo List</h1>
-      < Todos todos={todos} onToggle={handleToggleTodo} />
+      < Todos todos={activeTodos} onToggle={handleToggleTodo} />
+      <h2>Done Todos</h2>
+      < Todos todos={doneTodos} onToggle={handleToggleTodo} />
     </>
   );
 }

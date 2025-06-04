@@ -1,4 +1,3 @@
-import { type ChangeEvent } from "react";
 import { Todo } from "../models/Todo"
 
 type TodoPresentationProps = {
@@ -7,10 +6,8 @@ type TodoPresentationProps = {
 }
 
 export const TodoPresentation = ({ todo, onToggle }: TodoPresentationProps) => {
-  const handleStatus = (e: ChangeEvent<HTMLInputElement>) => {
-    if(e.target.checked) {
-      onToggle(todo.id);
-    }
+  const handleStatus = () => {
+    onToggle(todo.id);
   } 
 
   return (
