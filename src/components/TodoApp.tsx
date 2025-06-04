@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { Todo } from "../models/Todo";
 import { Todos } from "./Todos";
+import { AddTodo } from "./AddTodo";
 
 export const TodoApp = () => {
 
@@ -31,12 +32,25 @@ export const TodoApp = () => {
   console.log("Active Todos:", activeTodos)
   console.log("Done Todos:", doneTodos )
 
+  const addTodo = (t: Todo) => {
+    setTodos([...todos, t]);
+  }
+
   return (
     <>
       <h1>My Todo List</h1>
-      < Todos todos={activeTodos} onToggle={handleToggleTodo} />
-      <h2>Done Todos</h2>
-      < Todos todos={doneTodos} onToggle={handleToggleTodo} />
+
+      <section>
+        <h2>Active todos:</h2>
+        <Todos todos={activeTodos} onToggle={handleToggleTodo} />
+      </section>
+      
+      <section>
+        <h2>Completed todos</h2>
+        <Todos todos={doneTodos} onToggle={handleToggleTodo} />
+      </section>
+      
+      <AddTodo addTodo={addTodo}/>
     </>
   );
 }
