@@ -6,9 +6,8 @@
   margin-inline: 15px;
 
   button {
-    background-color: rgb(248, 123, 194);
     border-radius: 8px;
-    border-color: rgb(248, 123, 194);
     text-transform: uppercase;
+    cursor: pointer;
   }
 }
