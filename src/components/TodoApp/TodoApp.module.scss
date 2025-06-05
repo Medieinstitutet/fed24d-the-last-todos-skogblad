@@ -1,0 +1,27 @@
+h1 {
+  text-align: center;
+}
+
+.activeTodos, .doneTodos {
+  padding-bottom: 5px;
+  border-radius: 5px;
+  line-height: 1.5;
+
+  h2 {
+    padding-top: 10px;
+    margin-left: 15px;
+  }
+}
+
+
+.activeTodos {
+  background-color: rgb(212, 255, 231);
+  box-shadow: 4px 4px 15px #00000080;
+  margin-block: 40px;
+}
+
+.doneTodos {
+  background-color: rgb(251, 248, 221);
+  color: #70757a;;
+
+}

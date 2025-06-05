@@ -2,6 +2,7 @@ import { useState } from "react";
 import type { Todo } from "../../models/Todo";
 import { Todos } from "../Todos/Todos";
 import { AddTodo } from "../AddTodo/AddTodo";
+import style from "./TodoApp.module.scss"
 
 export const TodoApp = () => {
 
@@ -40,12 +41,12 @@ export const TodoApp = () => {
     <>
       <h1>My Todo List</h1>
 
-      <section>
+      <section className={style.activeTodos}>
         <h2>Active todos:</h2>
         <Todos todos={activeTodos} onToggle={handleToggleTodo} />
       </section>
       
-      <section>
+      <section className={style.doneTodos}>
         <h2>Completed todos</h2>
         <Todos todos={doneTodos} onToggle={handleToggleTodo} />
       </section>

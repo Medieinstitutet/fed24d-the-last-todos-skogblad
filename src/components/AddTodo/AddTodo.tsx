@@ -1,5 +1,6 @@
 import { useState, type ChangeEvent, type FormEvent } from "react"
 import { Todo } from "../../models/Todo";
+import style from "./AddTodo.module.scss"
 
 type AddTodoProps = {
   addTodo: (t: Todo) => void;
@@ -25,7 +26,7 @@ export const AddTodo = ({ addTodo }: AddTodoProps) => {
   }
 
   return (
-    <section>
+    <section className={style.section}>
       <h3>Create new todo</h3>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Add todo: </label>

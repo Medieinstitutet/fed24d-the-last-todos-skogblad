@@ -12,7 +12,7 @@ export const TodoPresentation = ({ todo, onToggle }: TodoPresentationProps) => {
 
   return (
     <li>
-      {todo.name} | Done: <input type="checkbox" checked={todo.done} id="done" onChange={handleStatus}/>
+      {todo.name} <input type="checkbox" checked={todo.done} id="done" onChange={handleStatus}/>
     </li>
   )
 }
