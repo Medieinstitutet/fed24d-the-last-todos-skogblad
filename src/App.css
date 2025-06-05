@@ -1,6 +1,13 @@
-/*#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@media screen and (min-width: 768px) {
+  #root {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 1.2rem;
+    margin-inline: 20px;
+
+    input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+    }
+  }
 }

@@ -14,5 +14,19 @@
 
   button {
     margin-left: 10px;
+    padding-block: 3px;
+    padding-inline: 8px;
   }
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    grid-column: span 2;
+
+    button {
+      font-size: 1.1rem;
+      padding-inline: 20px;
+      padding-block: 5px;
+    }
+  }  
 }
