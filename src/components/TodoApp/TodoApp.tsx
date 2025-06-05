@@ -1,7 +1,7 @@
 import { useState } from "react";
-import type { Todo } from "../models/Todo";
-import { Todos } from "./Todos";
-import { AddTodo } from "./AddTodo";
+import type { Todo } from "../../models/Todo";
+import { Todos } from "../Todos/Todos";
+import { AddTodo } from "../AddTodo/AddTodo";
 
 export const TodoApp = () => {
 

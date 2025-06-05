@@ -1,5 +1,5 @@
-import type { Todo } from "../models/Todo"
-import { TodoPresentation } from "./TodoPresentation";
+import type { Todo } from "../../models/Todo"
+import { TodoPresentation } from "../TodoPresentation/TodoPresentation";
 
 type TodosProps = {
   todos: Todo[];
