@@ -1,0 +1,11 @@
+@mixin button-style {
+  border-radius: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@mixin todo-layout {
+  padding-bottom: 5px;
+  border-radius: 5px;
+  line-height: 1.5;
+}

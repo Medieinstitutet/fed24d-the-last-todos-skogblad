@@ -1,13 +1,14 @@
+@use "./mixins" as *;
+@import "/src/styles/variables";
+
 :root {
-  background-color: rgb(251, 242, 230);
+  background-color: $mainBackground;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: #213547;
+  color: $fontColor;
   font-size: 1rem;
   margin-inline: 15px;
 
   button {
-    border-radius: 8px;
-    text-transform: uppercase;
-    cursor: pointer;
+    @include button-style;
   }
 }

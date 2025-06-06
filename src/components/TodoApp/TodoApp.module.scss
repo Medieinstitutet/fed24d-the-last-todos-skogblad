@@ -1,3 +1,6 @@
+@use "/src/styles/mixins" as *;
+@import "/src/styles/variables";
+
 h1 {
   text-align: center;
 }
@@ -6,15 +9,13 @@ h1 {
   display: block;
   margin-left: auto;
   margin-top: 40px;
-  background-color: #475c6e;
-  border: #354a5d;
-  color: rgb(251, 242, 230);
+  background-color: $sortBtnBackground;
+  border: $sortBtnBackground;
+  color: $mainBackground;
 }
 
 .activeTodos, .doneTodos {
-  padding-bottom: 5px;
-  border-radius: 5px;
-  line-height: 1.5;
+  @include todo-layout;
 
   h2 {
     padding-top: 10px;
@@ -23,7 +24,7 @@ h1 {
 }
 
 .activeTodos {
-  background-color: rgb(212, 255, 231);
+  background-color: $activTodosBackground;
   box-shadow: 4px 4px 15px #00000080;
   margin-bottom: 40px;
 
@@ -32,16 +33,16 @@ h1 {
   }
 
   li:hover {
-    background-color: beige;
+    background-color: $hoverTodos;
   }
 }
 
 .doneTodos {
-  background-color: rgb(251, 248, 221);
-  color: #70757a;
+  background-color: $doneTodosBackground;
+  color: $doneTodosColor;
 
   li:hover {
-    background-color: beige;
+    background-color: $hoverTodos;
   }
 }
 

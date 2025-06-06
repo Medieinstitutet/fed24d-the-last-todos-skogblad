@@ -1,5 +1,7 @@
+@import "/src/styles/variables";
+
 .section {
-  background-color: rgb(255, 202, 236);
+  background-color: $addTodoBackground;
   padding-top: 20px;
   padding-bottom: 30px;
   text-align: center;
@@ -16,8 +18,8 @@
     margin-left: 10px;
     padding-block: 3px;
     padding-inline: 8px;
-    background-color: rgb(248, 123, 194);
-    border-color: rgb(248, 123, 194)
+    background-color: $addTodoBtn;
+    border-color: $addTodoBtn;
   }
 }
 
